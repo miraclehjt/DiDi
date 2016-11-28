@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.parent{
+				width: 500px;
+				height: 300px;
+				background: yellow;
+				/*默认元素垂直排列,加入这个属性值,变为水平排列,FF和chrome都适用*/
+				display: -webkit-box;
+				
+				/* 虽然默认的排列方式是水平的，但是为了区分起见，加上该属性 ，如果没有display: -webkit-box;这个起不了作用*/
+				-webkit-box-orient: horizontal;
+			}
+			.child-one{
+				background: green;
+				/*width: 100px;*/
+				height: 100px;
+				-webkit-box-flex: 1;
+			}
+			.child-two{
+				background: red;
+				/*width: 100px;*/
+				height: 100px;
+				-webkit-box-flex: 2;
+			}
+			.child-three{
+				background: orchid;
+				/*width: 100px;*/
+				height: 100px;
+				-webkit-box-flex: 3;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div">
+			<div class="parent">
+				<div class="child-one">1</div>
+				<div class="child-two">2</div>
+				<div class="child-three">3</div>
+			</div>
+		</div>
+		
+		<div style="display: none;">
+			<pre>
+				用于父元素的样式：
+				display: box; 该属性会将此元素及其直系子代加入弹性框模型中。（Flexbox 模型只适用于直系子代）
+				
+				box-orient: horizontal | vertical | inherit; 该属性定义父元素的子元素是如何排列的。
+				
+				box-pack: start | end | center | justify; 设置沿 box-orient 轴的父元素中子元素的排列方式。
+				因此，如果 box-orient 是水平方向，则父元素的子元素是水平的排列方式，反之亦然。
+				（表示父容器里面子容器的水平对齐方式--垂直排列时--定宽）
+				
+				box-align: start | end | center | baseline | stretch; 基本上而言是 box-pack 的同级属性。
+				设置框的子代在框中的排列方式。如果方向是水平的，该属性就会决定垂直排列，反之亦然。
+				（表示父容器里面子容器的垂直对齐方式--水平排列时--定高）
+				
+				用于子元素的样式：
+				box－flex: 0 | 任意数字; 该属性让子容器针对父容器的宽度按一定规则进行划分。
+			</pre>
+		</div>
+	</body>
+
+
+</html>
