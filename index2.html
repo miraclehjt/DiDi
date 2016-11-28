@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+
+		<style type="text/css">
+			/*.swiper-container {
+			    width: 600px;
+			    height: 300px;
+			} */
+			
+			* {
+				margin: 0;
+				padding: 0;
+				-webkit-transition: all 1s ease-in;
+			}
+			
+			body{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 13px;
+    			line-height: 1.5;
+			}
+			
+			img {
+				width: 100%;
+			}
+			
+			::-webkit-scrollbar {
+				display: none;
+			}
+			
+			.swiper-container{
+				color: #fff;
+			}
+			
+			.img_wrap {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.img_1 {
+				background: url(img/page-1.jpg) no-repeat center;
+				background-size: cover;
+			}
+			
+			.logo {
+				opacity: 0;
+				top: 7%;
+				width: 36%;
+				left: 32%;
+				position: absolute;
+				-webkit-transition: all 1s ease-in;
+			}
+			
+			.one_slide_1 {
+				opacity: 0;
+				top: 60%;
+				width: 70%;
+				left: 15%;
+				position: absolute;
+			}
+			
+			.pub_passdown {
+				position: absolute;
+				width: 10%;
+				left: 45%;
+				bottom: 4%;
+				-webkit-animation-name: passdown;
+				-webkit-animation-timing-function: ease;
+				-webkit-animation-duration: 0.8s;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			.img_2 {
+				background: url(img/page-5.jpg) no-repeat center;
+				background-size: cover;
+			}
+			.tow_slide_1 {
+			    opacity: 0;
+			    top: 48%;
+			    position: absolute;
+			    width: 100%;
+			    -webkit-transition:all 1.5s linear ;
+			}
+			
+			.orange {
+			    text-align: center;
+			    width: 100%;
+			    color: #ff8903;
+			    font-weight: 800;
+			    font-size: 17px;
+			    padding: 2px 0;
+			}
+			
+			.white {
+			    text-align: center;
+			    width: 100%;
+			    font-weight: 800;
+			    font-size: 17px;
+			    padding: 2px 0;
+			}
+			
+			.img_3 {
+				background: url(img/page-2.jpg) no-repeat center;
+				background-size: cover;
+			}
+			
+			.three_slide_1 {
+			    opacity: 1;
+			    margin-top: 67%;
+			    margin-left: 10%;
+			    width: 53%;
+			}
+			
+			.three_slide_2 {
+			    opacity: 1;
+			    margin-top: 0;
+			    width: 80%;
+			    margin-left: 10%;
+			}
+			
+			.desc {
+			    font-size: 15px;
+			    width: 100%;
+			    font-weight: 800;
+			    text-align: left;
+			    color: #cccccc;
+			}
+			
+			.img_4 {
+				background: url(img/page-3.jpg) no-repeat center;
+				background-size: cover;
+			}
+			.four_slide_1 {
+			    opacity: 1;
+			    margin-top: 67%;
+			    margin-left: 10%;
+			    width: 53%;
+			}
+			.four_slide_2 {
+			    opacity: 1;
+			    margin-top: 0;
+			    width: 80%;
+			    margin-left: 10%;
+			}
+			.img_5 {
+				background: url(img/page-4.jpg) no-repeat center;
+				background-size: cover;
+			}
+			
+			.img_6 {
+				background: url(img/page-13.jpg) no-repeat center;
+				background-size: cover;
+			}
+			
+			.img_7 {
+				background: url(img/page-6.jpg) no-repeat center;
+				background-size: cover;
+			}
+			.seven_slide_1 {
+			    opacity: 1;
+			    top: 48%;
+			    position: absolute;
+			    width: 100%;
+			}
+			.img_8 {
+				background: url(img/page-7.jpg) no-repeat center;
+				background-size: cover;
+			}
+			.eight_slide_1 {
+			    opacity: 1;
+			    top: 55%;
+			    width: 56%;
+			    left: 22%;
+			    position: absolute;
+			}
+			.button {
+			    opacity: 1;
+			    top: 78%;
+			    width: 60%;
+			    left: 20%;
+			    position: absolute;
+			}
+			.img_9 {
+				background: url(img/page-8.jpg) no-repeat center;
+				background-size: cover;
+			}
+			
+			.img_10 {
+				background: url(img/page-9.jpg) no-repeat center;
+				background-size: cover;
+			}
+			
+			.img_11 {
+				background: url(img/page-10.jpg) no-repeat center;
+				background-size: cover;
+			}
+			
+			.img_12 {
+				background: url(img/page-11.jpg) no-repeat center;
+				background-size: cover;
+			}
+			
+			.img_13 {
+				background: url(img/page-12.jpg) no-repeat center;
+				background-size: cover;
+			}
+			.shisan_slide_1 {
+			    opacity: 1;
+			    top: 42%;
+			    width: 100%;
+			    position: absolute;
+			}
+			.shisan_slide_2{
+			    opacity: 1;
+			    top: 66%;
+			    position: absolute;
+			    width: 24%;
+			    left: 38%;
+			}
+			/*箭头上下运动动画  51*/
+			@-webkit-keyframes passdown {
+				0% {
+					bottom: 5%;
+				}
+				50% {
+					bottom: 3.2%;
+				}
+				100% {
+					bottom: 5%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="swiper-container" id="container">
+			<div class="swiper-wrapper img_wrap">
+				<div class="swiper-slide img_1">
+					<div class="logo">
+						<img src="img/logo.png" />
+					</div>
+					<div class="one_slide_1">
+						<img src="img/page-1-1.png">
+					</div>
+					<div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+				<div class="swiper-slide img_2">
+					<div class="tow_slide_1">
+			          <p class="orange">据统计，</p>
+			          <p class="orange">每天要和1312个陌生人相遇，</p>
+			          <p class="orange">有时候，</p>
+			          <p class="orange">陌生人的一两句话，</p>
+			          <p class="white">一个微笑，</p>
+			          <p class="white">却满是温暖。</p>
+			        </div>
+			        <div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+				<div class="swiper-slide img_3">
+					<div class="three_slide_1">
+						<img src="img/page-2-1.png">
+					</div>
+					<div class="three_slide_2">
+			          <p class="desc">人与人之间的心墙，只需要一句平常的话语，就能完全打开</p>
+			          <p class="desc">“这里网不好，回家用滴滴再付车费吧。”</p>    
+			        </div>
+			        <div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+				<div class="swiper-slide img_4">
+					<div class="three_slide_1">
+						<img src="img/page-3-1.png">
+					</div>
+					<div class="three_slide_2">
+			          <p class="desc">人与人之间的距离，一通电话，一次掉头，就悄然拉近</p>
+			          <p class="desc">“文件落我车上了，你等我会儿，我到前面掉头给你送回来”</p>
+			        </div>
+					<div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+				<div class="swiper-slide img_5">
+					<div class="three_slide_1">
+						<img src="img/page-4-1.png">
+					</div>
+					<div class="three_slide_2">
+			          <p class="desc">刮风下雨已不重要了，寒冬里那一句问候足以温暖你我</p>
+			          <p class="desc">“你好，我到你家楼下了，外面在下雨，请记得带伞。”</p>
+			        </div>
+					<div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+				<div class="swiper-slide img_6">
+					<div class="three_slide_1">
+						<img src="img/page-13-1.png">
+					</div>
+					<div class="three_slide_2">
+			          <p class="desc">夜再黑，路再远，只要一束光，便可安心</p>
+			          <p class="desc">“路太黑了，我给你打个远光灯照明吧，你走过这段路，我再开车离开”</p>
+			        </div>
+					<div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+				<div class="swiper-slide img_7">
+					<div class="seven_slide_1">
+			          <p class="orange">每天我都会遇见很多人，</p>
+			          <p class="orange">行色匆匆，</p>
+			          <p class="orange">因为走得太快，</p>
+			          <p class="orange">看不见来自于生活的感动。</p>
+			          <p class="white">其实，</p>
+			          <p class="white">感人的故事每天都在发生</p>
+			        </div>
+			        <div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+				<div class="swiper-slide img_8">
+					<div class="eight_slide_1">
+						<img src="img/page-7-1.png">
+					</div>
+					<div class="button">
+						<img src="img/page-7-2.png">
+					</div>
+					<div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+				<div class="swiper-slide img_9">
+					<div class="eight_slide_1">
+						<img src="img/page-8-1.png">
+					</div>
+					<div class="button">
+						<img src="img/page-8-2.png">
+					</div>
+					<div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+				<div class="swiper-slide img_10">
+					<div class="eight_slide_1">
+						<img src="img/page-9-1.png">
+					</div>
+					<div class="button">
+						<img src="img/page-9-2.png">
+					</div>
+					<div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+				<div class="swiper-slide img_11">
+					<div class="eight_slide_1">
+						<img src="img/page-10-1.png">
+					</div>
+					<div class="button">
+						<img src="img/page-10-2.png">
+					</div>
+					<div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+				<div class="swiper-slide img_12">
+					<div class="eight_slide_1">
+						<img src="img/page-11-1.png">
+					</div>
+					<div class="button">
+						<img src="img/page-10-2.png">
+					</div>
+					<div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+				<div class="swiper-slide img_13">
+					<div class="logo" style="opacity: 1;">
+						<img src="img/logo.png">
+					</div>
+					<div class="shisan_slide_1">
+			          <p class="orange">寒冬里，</p>
+			          <p class="orange">请在下车的时候，</p>
+			          <p class="orange">对默默奉献的师傅们，</p>
+			          <p class="orange">说一声：</p>
+			        </div>
+			        <div class="shisan_slide_2">
+			        	<img src="img/page-12-2.png">
+			        </div>
+			        <div class="button">
+			        	<img src="img/page-12-3.png">
+			        </div>
+			        <div class="pub_passdown">
+						<img src="img/pub-1.png">
+					</div>
+				</div>
+			</div>
+			<!-- 如果需要分页器 -->
+			<!--<div class="swiper-pagination"></div>-->
+
+			<!-- 如果需要导航按钮 -->
+			<!--<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>-->
+
+			<!-- 如果需要滚动条 -->
+			<!--<div class="swiper-scrollbar"></div>-->
+		</div>
+
+		<script src="js/swiper.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			//			最外层容器宽度为设备宽高
+			$('.swiper-container').css({
+				'width': $(window).width() + 'px',
+				'height': $(window).height() + 'px'
+			});
+			
+			var mySwiper = new Swiper('.swiper-container');
+			//'-webkit-transform: translateX(20px);
+			//$('#container').css('-webkit-transform','translateY(200px)');
+			$('#container').css('-webkit-transform','translateY(200px)');
+			var cont=document.getElementById("container");
+			var val=cont.style.webkitTransform;
+			console.log(parseInt(val));
+			if (parseInt(val)==200) {
+				console.log('200');
+			};
+			console.log(val);
+			
+
+			$('.logo,.one_slide_1,.tow_slide_1').css('opacity', 1);
+
+			var mySwiper = new Swiper('.swiper-container', {
+				direction: 'vertical',
+				loop: true,
+
+				// 如果需要分页器
+				//pagination: '.swiper-pagination',
+
+				// 如果需要前进后退按钮
+				//nextButton: '.swiper-button-next',
+				//prevButton: '.swiper-button-prev',
+
+				// 如果需要滚动条
+				//				scrollbar: '.swiper-scrollbar',
+			})
+		</script>
+
+	</body>
+
+</html>

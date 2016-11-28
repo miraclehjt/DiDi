@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.fix {
+				zoom: 1;
+			}
+			.fix::after {
+				width: 0;
+				height: 0;
+				content: '';
+				visibility: hidden;
+				clear: both;
+			}
+			.wrap {
+				width: 400px;
+				height: 200px;
+				border: 1px solid #000000;
+				margin: 20px auto;
+				position: relative;
+				overflow: hidden;
+				font-family: arial, "微软雅黑";
+				font-size: 30px;
+				color: white;
+				text-align: center;
+				line-height: 200px;
+			}
+			
+			ul {
+				position: absolute;
+				left: 0px;
+				top: 0;
+				transition: all .5s ease-in;
+			}
+			
+			li {
+				list-style: none;
+				width: 400px;
+				height: 200px;
+				float: left;
+			}
+			
+			li:nth-child(1) {
+				background: red;
+			}
+			
+			li:nth-child(2) {
+				background: green;
+			}
+			
+			li:nth-child(3) {
+				background: blue;
+			}
+			
+			li:nth-child(4) {
+				background: yellow;
+			}
+			
+			li:nth-child(5) {
+				background: gray;
+			}
+			
+			.fx {
+				margin: 20px 200px;
+				display: inline-block;
+			}
+			
+			.fx div {
+				padding: 20px;
+				border: 1px solid #0062CC;
+				display: inline-block;
+			}
+			
+			.one img {
+				opacity: 0;
+				transition: opacity 1s ease;
+			}
+		</style>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<ul class="fix">
+				<li class="one">
+					<img src="../didi3/滴滴打车_files/logo.png" />
+				</li>
+				<li class="two">
+					<img src="../didi3/滴滴打车_files/logo.png" />
+				</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</div>
+		<div class="fx">
+			<div class="left">left</div>
+			<div class="right">right</div>
+		</div>
+
+		<script type="text/javascript">
+			//			console.log($('ul').css('left'));
+			$(function() {
+				var index = 0;
+				var timer = null;
+				$('ul').css({
+					width: $('li').eq(0).width() * $('li').length + 'px',
+					height: $('li').eq(0).height() + 'px'
+				});
+				if(parseInt($('ul').css('left')) == 0) {
+					$('.one img').css('opacity', 1);
+				} else {
+					$('.one img').css('opacity', 0);
+				}
+				$('.left').click(function() {
+					//					console.log($('ul').css('left'));
+					//					console.log(index);
+					index--;
+					$('ul').css({
+						left: $('li').eq(0).width() * index + 'px'
+					});
+					//					console.log(index);
+					if(index <= -$('li').length) {
+						$('ul').css({
+							left: 0 + 'px'
+						});
+						index = 0;
+					}
+				});
+
+				$('.right').click(function() {
+					//					console.log($('ul').css('left'));
+					//					console.log(index);
+					index++;
+					if(index >= 1) {
+						index = -($('li').length - 1);
+					}
+					$('ul').css('left', $('li').eq(0).width() * index + 'px');
+
+					console.log($('ul').css('left'));
+				});
+
+				timer = setInterval(function() {
+					index++;
+					if(index >= 1) {
+						index = -($('li').length - 1);
+					}
+					$('ul').css('left', $('li').eq(0).width() * index + 'px');
+				}, 2000);
+
+				$('.wrap ul').mouseover(function() {
+					clearInterval(timer);
+					setTimeout(function() {
+						timer = setInterval(function() {
+							index++;
+							if(index >= 1) {
+								index = -($('li').length - 1);
+							}
+							$('ul').css('left', $('li').eq(0).width() * index + 'px');
+						}, 2000);
+					}, 2000);
+				});
+			});
+		</script>
+	</body>
+
+</html>

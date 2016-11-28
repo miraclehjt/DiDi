@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				-webkit-user-select: none;
+				/* prevent copy paste */
+			}
+			
+			.clear {
+				width: 0;
+				height: 0;
+				overflow: hidden;
+				clear: both;
+			}
+			
+			input[type="text"] {
+				-webkit-user-select: text;
+			}
+			/*body {
+			  -webkit-align-items: center;  
+			  -ms-flex-align: center;  
+			  align-items: center;
+			  display: -webkit-flex;
+			  display: flex;
+			}*/
+			
+			ul {
+				/*margin: 20px 200px;*/
+				width: 600px;
+				max-height: 0;
+				overflow: hidden;
+				border: 1px solid #0062CC;
+				/*float: left;*/
+				display: flex;
+				align-items: center;
+				-webkit-font-smoothing: antialiased;
+			}
+			
+			ul:hover {
+				max-height: 400px;
+				transition: 1s ease;
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feccb1+0,fb955e+94 */
+				background: rgb(254, 204, 177);
+				/* Old browsers */
+				background: -moz-linear-gradient(left, rgba(254, 204, 177, 1) 0%, rgba(251, 149, 94, 1) 94%);
+				/* FF3.6-15 */
+				background: -webkit-linear-gradient(left, rgba(254, 204, 177, 1) 0%, rgba(251, 149, 94, 1) 94%);
+				/* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to right, rgba(254, 204, 177, 1) 0%, rgba(251, 149, 94, 1) 94%);
+				/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', endColorstr='#fb955e', GradientType=1);
+				/* IE6-9 */
+				copy
+			}
+			
+			li {
+				list-style: none;
+				float: left;
+				/*padding: 20px;*/
+				height: 80px;
+				width: 80px;
+				text-align: center;
+				line-height: 80px;
+				flex: 1;
+			}
+			
+			li:not(:last-child) {
+				border-right: 1px solid #242424;
+			}
+			
+			ul li:not(:last-child)::after {
+				content: ",";
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul>
+			<li>首页</li>
+			<li>首页</li>
+			<li>首页</li>
+			<li>首页</li>
+			<li>首页</li>
+			<li>首页</li>
+			<div class="clear"></div>
+		</ul>
+
+		<table border="" cellspacing="" cellpadding="" style="width: 400px;table-layout: fixed;	">
+			<tr>
+				<td>111</td>
+				<td>111</td>
+				<td>111</td>
+			</tr>
+			<tr>
+				<td>111</td>
+				<td>111</td>
+				<td>111</td>
+			</tr>
+			<tr>
+				<td>111</td>
+				<td>111</td>
+				<td>111</td>
+			</tr>
+			<tr>
+				<td><input type="text" name="" id="" value="" /></td>
+				<td>111</td>
+				<td>https://segmentfault.com/a/1190000003918866</td>
+			</tr>
+		</table>
+	</body>
+
+</html>

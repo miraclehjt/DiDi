@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			div{
+				border: 1px solid #000000;
+			}
+			.wrap{
+				/*设置外层容器多栏多列布局*/
+				display: flex;
+				/*横向*/
+				flex-flow: row;
+				/*子元素撑满父级，默认*/
+				/*-webkit-align-items:strecth;*/
+				-webkit-align-items:center;
+				/*纵向*/
+				/*flex-flow: column;*/
+				height: 200px;
+				width: 400px;
+				box-sizing: border-box;
+				margin: 20px auto;
+			}
+			.left{
+				flex: 1;
+			}
+			.cont{
+				/*width: 300px;*/
+				width: 50%;
+			}
+			.right{
+				flex: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="left">
+				<ul>
+					<li>首页</li>
+					<li>首页</li>
+					<li>首页</li>
+				</ul>
+			</div>
+			<div class="cont">content</div>
+			<div class="right">right</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.sort-list{
+				width: 200px;
+				height: 200px;
+				background: yellow;
+				margin: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="sort-list"></div>
+		<div class="sort-list"></div>
+		<div class="sort-list"></div>
+		<script type="text/javascript">
+			//js里transform怎么填写translate3d值？
+			var w = document.documentElement.clientWidth * 0.2;
+			var sort = document.getElementsByClassName("sort-list");
+			for(var i = 0; i < sort.length; i++) {
+				var tw = w * (i - 1);
+				sort[i].style.webkitTransform='translate3d('+tw+'px,0,0)';
+			}
+		</script>
+	</body>
+
+</html>
