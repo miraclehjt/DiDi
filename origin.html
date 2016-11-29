@@ -4,9 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" href="css/idangerous.swiper.css">
-		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/idangerous.swiper-2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
 		
 		<style>
 		    body {
@@ -59,7 +57,9 @@
 	            <div class="swiper-slide">Slide 10</div>
 	        </div>
 	    </div>
-
+		
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			/*======
 			Use document ready or window load events
@@ -93,9 +93,14 @@
 			$(document).ready(function(){
 			  var mySwiper = new Swiper('.swiper-container',{
 			    mode:'vertical',
-			    speed: 600,    
+			    speed: 600,
+			    autoplay : 1000,
+			    //用户操作swiper之后，是否禁止autoplay。默认为true
+				autoplayDisableOnInteraction : false,
+			    //默认为false，普通模式：slide滑动时只滑动一格，并自动贴合wrapper，设置为true则变为free模式，slide会根据惯性滑动且不会贴合。
+			    freeMode:false, 
 			    onSlideChangeStart: function(swiper){
-			      alert('Hello 1');
+			      //alert('Hello 1');
 			    }
 			  });  
 			});
