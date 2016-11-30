@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background: red;">
+					slide1
+				</div>
+				<div class="swiper-slide" style="background: yellow;">
+					slide2
+				</div>
+				<div class="swiper-slide" style="background: cornflowerblue;">
+					slide3
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		    $('.swiper-slide').css({
+		    	'width':$(window).width(),
+		    	'height':$(window).height()
+		    });
+			var mySwiper = new Swiper('.swiper-container', {
+				autoplay: 1000,//可选选项，自动滑动
+				initialSlide :2,
+				direction : 'vertical',
+			})
+		</script>
+	</body>
+</html>
