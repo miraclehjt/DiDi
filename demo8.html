@@ -30,13 +30,14 @@
 		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 		    $('.swiper-slide').css({
-		    	'width':$(window).width(),
-		    	'height':$(window).height()
+		    	'width':$(document).width(),
+		    	'height':$(document).height()
 		    });
 			var mySwiper = new Swiper('.swiper-container', {
 				autoplay: 1000,//可选选项，自动滑动
 				initialSlide :2,
 				direction : 'vertical',
+				autoplayStopOnLast : true,
 			});
 		</script>
 	</body>
