@@ -13,7 +13,8 @@ var val = cont.style.webkitTransform;
 
 var mySwiper = new Swiper('.swiper-container', {
 	direction: 'vertical',
-	loop: true,
+	freeMode : false,
+	loop: false,  //防止滑动到最后一张回到第一张
 	onInit: function(swiper) { //Swiper2.x的初始化是onFirstInit
 		swiperAnimateCache(swiper); //隐藏动画元素 
 		swiperAnimate(swiper); //初始化完成开始动画
